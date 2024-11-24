@@ -1,0 +1,468 @@
+   8: T1_FARM_CARROT_SEED                                              : Carrot Seeds
+   9: T2_FARM_BEAN_SEED                                                : Bean Seeds
+  10: T3_FARM_WHEAT_SEED                                               : Wheat Seeds
+  11: T4_FARM_TURNIP_SEED                                              : Turnip Seeds
+  12: T5_FARM_CABBAGE_SEED                                             : Cabbage Seeds
+  13: T6_FARM_POTATO_SEED                                              : Potato Seeds
+  14: T7_FARM_CORN_SEED                                                : Corn Seeds
+  15: T8_FARM_PUMPKIN_SEED                                             : Pumpkin Seeds
+  16: T2_FARM_AGARIC_SEED                                              : Arcane Agaric Seeds
+  17: T3_FARM_COMFREY_SEED                                             : Brightleaf Comfrey Seeds
+  18: T4_FARM_BURDOCK_SEED                                             : Crenellated Burdock Seeds
+  19: T5_FARM_TEASEL_SEED                                              : Dragon Teasel Seeds
+  20: T6_FARM_FOXGLOVE_SEED                                            : Elusive Foxglove Seeds
+  21: T7_FARM_MULLEIN_SEED                                             : Firetouched Mullein Seeds
+  22: T8_FARM_YARROW_SEED                                              : Ghoul Yarrow Seeds
+  23: T3_FARM_OX_BABY                                                  : Journeyman's Ox Calf
+  24: T4_FARM_OX_BABY                                                  : Adept's Ox Calf
+  25: T5_FARM_OX_BABY                                                  : Expert's Ox Calf
+  26: T6_FARM_OX_BABY                                                  : Master's Ox Calf
+  27: T7_FARM_OX_BABY                                                  : Grandmaster's Ox Calf
+  28: T8_FARM_OX_BABY                                                  : Elder's Ox Calf
+  29: T3_FARM_OX_GROWN                                                 : Journeyman's Ox
+  30: T4_FARM_OX_GROWN                                                 : Adept's Ox
+  31: T5_FARM_OX_GROWN                                                 : Expert's Ox
+  32: T6_FARM_OX_GROWN                                                 : Master's Ox
+  33: T7_FARM_OX_GROWN                                                 : Grandmaster's Ox
+  34: T8_FARM_OX_GROWN                                                 : Elder's Ox
+  35: T3_FARM_HORSE_BABY                                               : Journeyman's Foal
+  36: T4_FARM_HORSE_BABY                                               : Adept's Foal
+  37: T5_FARM_HORSE_BABY                                               : Expert's Foal
+  38: T6_FARM_HORSE_BABY                                               : Master's Foal
+  39: T7_FARM_HORSE_BABY                                               : Grandmaster's Foal
+  40: T8_FARM_HORSE_BABY                                               : Elder's Foal
+  41: T3_FARM_HORSE_GROWN                                              : Journeyman's Horse
+  42: T4_FARM_HORSE_GROWN                                              : Adept's Horse
+  43: T5_FARM_HORSE_GROWN                                              : Expert's Horse
+  44: T6_FARM_HORSE_GROWN                                              : Master's Horse
+  45: T7_FARM_HORSE_GROWN                                              : Grandmaster's Horse
+  46: T8_FARM_HORSE_GROWN                                              : Elder's Horse
+  47: T6_FARM_DIREWOLF_BABY                                            : Direwolf Pup
+  48: T7_FARM_DIREBOAR_BABY                                            : Direboar Piglet
+  49: T8_FARM_DIREBEAR_BABY                                            : Direbear Cub
+  50: T7_FARM_SWAMPDRAGON_BABY                                         : Swamp Dragon Pup
+  51: T8_FARM_MAMMOTH_BABY                                             : Mammoth Calf
+  52: T5_FARM_COUGAR_BABY                                              : Swiftclaw Cub
+  53: T8_FARM_DIREWOLF_BABY                                            : Ghostwolf Pup
+  54: T4_FARM_GIANTSTAG_BABY                                           : Adept's Fawn
+  55: T6_FARM_GIANTSTAG_BABY                                           : Master's Fawn
+  56: T6_FARM_GIANTSTAG_MOOSE_BABY                                     : Moose Calf
+  57: T8_FARM_RABBIT_EASTER_BABY                                       : Vibrant Spring Cottontail Egg
+  58: T8_FARM_RABBIT_EASTER_BABY_DARK                                  : Eerie Cottontail Egg
+  59: T8_FARM_RABBIT_EASTER_GROWN                                      : Tame Spring Cottontail
+  60: T8_FARM_RABBIT_EASTER_GROWN_DARK                                 : "Tame" Caerleon Cottontail
+  61: T5_FARM_MOABIRD_FW_BRIDGEWATCH_BABY                              : Baby Moabird
+  62: T5_FARM_DIREBEAR_FW_FORTSTERLING_BABY                            : Winter Bear Cub
+  63: T5_FARM_DIREBOAR_FW_LYMHURST_BABY                                : Wild Boarlet
+  64: T5_FARM_RAM_FW_MARTLOCK_BABY                                     : Bighorn Ram Lamb
+  65: T5_FARM_SWAMPDRAGON_FW_THETFORD_BABY                             : Baby Swamp Salamander
+  66: T5_FARM_GREYWOLF_FW_CAERLEON_BABY                                : Caerleon Greywolf Pup
+  67: T5_FARM_OWL_FW_BRECILIEN_BABY                                    : Mystic Owlet
+  68: T8_FARM_MOABIRD_FW_BRIDGEWATCH_BABY                              : Baby Elite Terrorbird
+  69: T8_FARM_DIREBEAR_FW_FORTSTERLING_BABY                            : Elite Winter Bear Cub
+  70: T8_FARM_DIREBOAR_FW_LYMHURST_BABY                                : Elite Wild Boarlet
+  71: T8_FARM_RAM_FW_MARTLOCK_BABY                                     : Elite Bighorn Ram Lamb
+  72: T8_FARM_SWAMPDRAGON_FW_THETFORD_BABY                             : Baby Elite Swamp Salamander
+  73: T8_FARM_GREYWOLF_FW_CAERLEON_BABY                                : Elite Greywolf Pup
+  74: T8_FARM_OWL_FW_BRECILIEN_BABY                                    : Elite Mystic Owlet
+  75: T6_FARM_DIREWOLF_GROWN                                           : Tame Direwolf
+  76: T7_FARM_DIREBOAR_GROWN                                           : Tame Direboar
+  77: T8_FARM_DIREBEAR_GROWN                                           : Tame Direbear
+  78: T7_FARM_SWAMPDRAGON_GROWN                                        : Tame Swamp Dragon
+  79: T8_FARM_MAMMOTH_GROWN                                            : Tame Mammoth
+  80: T5_FARM_COUGAR_GROWN                                             : Tame Swiftclaw
+  81: T8_FARM_DIREWOLF_GROWN                                           : Tame Ghostwolf
+  82: T4_FARM_GIANTSTAG_GROWN                                          : Adept's Tame Giant Stag
+  83: T6_FARM_GIANTSTAG_GROWN                                          : Master's Tame Giant Stag
+  84: T6_FARM_GIANTSTAG_MOOSE_GROWN                                    : Tame Moose
+  85: T5_FARM_MOABIRD_FW_BRIDGEWATCH_GROWN                             : Tame Moabird
+  86: T5_FARM_DIREBEAR_FW_FORTSTERLING_GROWN                           : Tame Winter Bear
+  87: T5_FARM_DIREBOAR_FW_LYMHURST_GROWN                               : Tame Wild Boar
+  88: T5_FARM_RAM_FW_MARTLOCK_GROWN                                    : Tame Bighorn Ram
+  89: T5_FARM_SWAMPDRAGON_FW_THETFORD_GROWN                            : Tame Swamp Salamander
+  90: T5_FARM_GREYWOLF_FW_CAERLEON_GROWN                               : Tame Greywolf
+  91: T5_FARM_OWL_FW_BRECILIEN_GROWN                                   : Tame Mystic Owl
+  92: T8_FARM_MOABIRD_FW_BRIDGEWATCH_GROWN                             : Tame Elite Terrorbird
+  93: T8_FARM_DIREBEAR_FW_FORTSTERLING_GROWN                           : Tame Elite Winter Bear
+  94: T8_FARM_DIREBOAR_FW_LYMHURST_GROWN                               : Tame Elite Wild Boar
+  95: T8_FARM_RAM_FW_MARTLOCK_GROWN                                    : Tame Elite Bighorn Ram
+  96: T8_FARM_SWAMPDRAGON_FW_THETFORD_GROWN                            : Tame Elite Swamp Salamander
+  97: T8_FARM_GREYWOLF_FW_CAERLEON_GROWN                               : Tame Elite Greywolf
+  98: T8_FARM_OWL_FW_BRECILIEN_GROWN                                   : Tame Elite Mystic Owl
+  99: T3_FARM_CHICKEN_BABY                                             : Baby Chickens
+ 100: T4_FARM_GOAT_BABY                                                : Kid
+ 101: T5_FARM_GOOSE_BABY                                               : Gosling
+ 102: T6_FARM_SHEEP_BABY                                               : Lamb
+ 103: T7_FARM_PIG_BABY                                                 : Piglet
+ 104: T8_FARM_COW_BABY                                                 : Calf
+ 105: T3_FARM_CHICKEN_GROWN                                            : Chicken
+ 106: T4_FARM_GOAT_GROWN                                               : Goat
+ 107: T5_FARM_GOOSE_GROWN                                              : Goose
+ 108: T6_FARM_SHEEP_GROWN                                              : Sheep
+ 109: T7_FARM_PIG_GROWN                                                : Pig
+ 110: T8_FARM_COW_GROWN                                                : Cow
+ 111: T6_MOUNTUPGRADE_GIANTSTAG_XMAS                                   : Decorative Stag Bridle
+ 112: UNIQUE_MOUNTUPGRADE_RAM_XMAS                                     : Decorative Ram Bridle
+ 113: T5_MOUNTUPGRADE_HORSE_CURSE                                      : Necromantic Elixir
+ 114: T8_MOUNTUPGRADE_HORSE_CURSE                                      : Spectral Mask
+ 115: T8_MOUNTUPGRADE_COUGAR_KEEPER                                    : Sacred Bone Marrow
+ 116: T5_MOUNTUPGRADE_HORSE_MORGANA                                    : Morgana Mare Saddle
+ 117: T8_MOUNTUPGRADE_HORSE_MORGANA                                    : Infernal Horseshoes
+ 118: T1_CARROT                                                        : Carrots
+ 119: T2_BEAN                                                          : Beans
+ 120: T3_WHEAT                                                         : Sheaf of Wheat
+ 121: T4_TURNIP                                                        : Turnips
+ 122: T5_CABBAGE                                                       : Cabbage
+ 123: T6_POTATO                                                        : Potatoes
+ 124: T7_CORN                                                          : Bundle of Corn
+ 125: T8_PUMPKIN                                                       : Pumpkin
+ 126: T2_AGARIC                                                        : Arcane Agaric
+ 127: T3_COMFREY                                                       : Brightleaf Comfrey
+ 128: T4_BURDOCK                                                       : Crenellated Burdock
+ 129: T5_TEASEL                                                        : Dragon Teasel
+ 130: T6_FOXGLOVE                                                      : Elusive Foxglove
+ 131: T7_MULLEIN                                                       : Firetouched Mullein
+ 132: T8_YARROW                                                        : Ghoul Yarrow
+ 133: T3_EGG                                                           : Hen Eggs
+ 134: T4_MILK                                                          : Goat's Milk
+ 135: T5_EGG                                                           : Goose Eggs
+ 136: T6_MILK                                                          : Sheep's Milk
+ 137: T8_MILK                                                          : Cow's Milk
+ 138: T1_FISH_FRESHWATER_ALL_COMMON                                    : Common Rudd
+ 139: T2_FISH_FRESHWATER_ALL_COMMON                                    : Striped Carp
+ 140: T3_FISH_FRESHWATER_ALL_COMMON                                    : Albion Perch
+ 141: T4_FISH_FRESHWATER_ALL_COMMON                                    : Bluescale Pike
+ 142: T5_FISH_FRESHWATER_ALL_COMMON                                    : Spotted Trout
+ 143: T6_FISH_FRESHWATER_ALL_COMMON                                    : Brightscale Zander
+ 144: T7_FISH_FRESHWATER_ALL_COMMON                                    : Danglemouth Catfish
+ 145: T8_FISH_FRESHWATER_ALL_COMMON                                    : River Sturgeon
+ 146: T1_FISH_SALTWATER_ALL_COMMON                                     : Common Herring
+ 147: T2_FISH_SALTWATER_ALL_COMMON                                     : Striped Mackerel
+ 148: T3_FISH_SALTWATER_ALL_COMMON                                     : Flatshore Plaice
+ 149: T4_FISH_SALTWATER_ALL_COMMON                                     : Bluescale Cod
+ 150: T5_FISH_SALTWATER_ALL_COMMON                                     : Spotted Wolffish
+ 151: T6_FISH_SALTWATER_ALL_COMMON                                     : Strongfin Salmon
+ 152: T7_FISH_SALTWATER_ALL_COMMON                                     : Bluefin Tuna
+ 153: T8_FISH_SALTWATER_ALL_COMMON                                     : Steelscale Swordfish
+ 154: T3_FISH_FRESHWATER_FOREST_RARE                                   : Greenriver Eel
+ 155: T5_FISH_FRESHWATER_FOREST_RARE                                   : Redspring Eel
+ 156: T7_FISH_FRESHWATER_FOREST_RARE                                   : Deadwater Eel
+ 157: T3_FISH_FRESHWATER_MOUNTAIN_RARE                                 : Upland Coldeye
+ 158: T5_FISH_FRESHWATER_MOUNTAIN_RARE                                 : Mountain Blindeye
+ 159: T7_FISH_FRESHWATER_MOUNTAIN_RARE                                 : Frostpeak Deadeye
+ 160: T3_FISH_FRESHWATER_HIGHLANDS_RARE                                : Stonestream Lurcher
+ 161: T5_FISH_FRESHWATER_HIGHLANDS_RARE                                : Rushwater Lurcher
+ 162: T7_FISH_FRESHWATER_HIGHLANDS_RARE                                : Thunderfall Lurcher
+ 163: T3_FISH_FRESHWATER_STEPPE_RARE                                   : Lowriver Crab
+ 164: T5_FISH_FRESHWATER_STEPPE_RARE                                   : Drybrook Crab
+ 165: T7_FISH_FRESHWATER_STEPPE_RARE                                   : Dusthole Crab
+ 166: T3_FISH_FRESHWATER_SWAMP_RARE                                    : Greenmoor Clam
+ 167: T5_FISH_FRESHWATER_SWAMP_RARE                                    : Murkwater Clam
+ 168: T7_FISH_FRESHWATER_SWAMP_RARE                                    : Blackbog Clam
+ 169: T3_FISH_SALTWATER_ALL_RARE                                       : Shallowshore Squid
+ 170: T5_FISH_SALTWATER_ALL_RARE                                       : Midwater Octopus
+ 171: T7_FISH_SALTWATER_ALL_RARE                                       : Deepwater Kraken
+ 172: T3_FISH_FRESHWATER_AVALON_RARE                                   : Whitefog Snapper
+ 173: T5_FISH_FRESHWATER_AVALON_RARE                                   : Clearhaze Snapper
+ 174: T7_FISH_FRESHWATER_AVALON_RARE                                   : Puremist Snapper
+ 175: T1_SEAWEED                                                       : Seaweed
+ 176: T8_FISH_SALTWATER_ALL_BOSS_SHARK                                 : Shark
+ 177: T1_FISHCHOPS                                                     : Chopped Fish
+ 178: T1_FISHSAUCE_LEVEL1                                              : Basic Fish Sauce
+ 179: T1_FISHSAUCE_LEVEL2                                              : Fancy Fish Sauce
+ 180: T1_FISHSAUCE_LEVEL3                                              : Special Fish Sauce
+ 893: T3_MEAT                                                          : Raw Chicken
+ 894: T4_MEAT                                                          : Raw Goat
+ 895: T5_MEAT                                                          : Raw Goose
+ 896: T6_MEAT                                                          : Raw Mutton
+ 897: T7_MEAT                                                          : Raw Pork
+ 898: T8_MEAT                                                          : Raw Beef
+ 899: T4_BUTTER                                                        : Goat's Butter
+ 900: T6_BUTTER                                                        : Sheep's Butter
+ 901: T8_BUTTER                                                        : Cow's Butter
+ 902: T6_ALCOHOL                                                       : Potato Schnapps
+ 903: T7_ALCOHOL                                                       : Corn Hooch
+ 904: T8_ALCOHOL                                                       : Pumpkin Moonshine
+ 905: T4_BREAD                                                         : Bread
+ 906: T3_FLOUR                                                         : Flour
+ 907: T1_WOOD                                                          : Rough Logs
+ 908: T2_WOOD                                                          : Birch Logs
+ 909: T3_WOOD                                                          : Chestnut Logs
+ 910: T4_WOOD                                                          : Pine Logs
+ 911: T5_WOOD                                                          : Cedar Logs
+ 912: T6_WOOD                                                          : Bloodoak Logs
+ 913: T7_WOOD                                                          : Ashenbark Logs
+ 914: T8_WOOD                                                          : Whitewood Logs
+ 915: T4_WOOD_LEVEL1@1                                                 : Uncommon Pine Logs
+ 916: T5_WOOD_LEVEL1@1                                                 : Uncommon Cedar Logs
+ 917: T6_WOOD_LEVEL1@1                                                 : Uncommon Bloodoak Logs
+ 918: T7_WOOD_LEVEL1@1                                                 : Uncommon Ashenbark Logs
+ 919: T8_WOOD_LEVEL1@1                                                 : Uncommon Whitewood Logs
+ 920: T4_WOOD_LEVEL2@2                                                 : Rare Pine Logs
+ 921: T5_WOOD_LEVEL2@2                                                 : Rare Cedar Logs
+ 922: T6_WOOD_LEVEL2@2                                                 : Rare Bloodoak Logs
+ 923: T7_WOOD_LEVEL2@2                                                 : Rare Ashenbark Logs
+ 924: T8_WOOD_LEVEL2@2                                                 : Rare Whitewood Logs
+ 925: T4_WOOD_LEVEL3@3                                                 : Exceptional Pine Logs
+ 926: T5_WOOD_LEVEL3@3                                                 : Exceptional Cedar Logs
+ 927: T6_WOOD_LEVEL3@3                                                 : Exceptional Bloodoak Logs
+ 928: T7_WOOD_LEVEL3@3                                                 : Exceptional Ashenbark Logs
+ 929: T8_WOOD_LEVEL3@3                                                 : Exceptional Whitewood Logs
+ 930: T4_WOOD_LEVEL4@4                                                 : Pristine Pine Logs
+ 931: T5_WOOD_LEVEL4@4                                                 : Pristine Cedar Logs
+ 932: T6_WOOD_LEVEL4@4                                                 : Pristine Bloodoak Logs
+ 933: T7_WOOD_LEVEL4@4                                                 : Pristine Ashenbark Logs
+ 934: T8_WOOD_LEVEL4@4                                                 : Pristine Whitewood Logs
+ 935: T1_ROCK                                                          : Rough Stone
+ 936: T2_ROCK                                                          : Limestone
+ 937: T3_ROCK                                                          : Sandstone
+ 938: T4_ROCK                                                          : Travertine
+ 939: T5_ROCK                                                          : Granite
+ 940: T6_ROCK                                                          : Slate
+ 941: T7_ROCK                                                          : Basalt
+ 942: T8_ROCK                                                          : Marble
+ 943: T4_ROCK_LEVEL1@1                                                 : Uncommon Travertine
+ 944: T5_ROCK_LEVEL1@1                                                 : Uncommon Granite
+ 945: T6_ROCK_LEVEL1@1                                                 : Uncommon Slate
+ 946: T7_ROCK_LEVEL1@1                                                 : Uncommon Basalt
+ 947: T8_ROCK_LEVEL1@1                                                 : Uncommon Marble
+ 948: T4_ROCK_LEVEL2@2                                                 : Rare Travertine
+ 949: T5_ROCK_LEVEL2@2                                                 : Rare Granite
+ 950: T6_ROCK_LEVEL2@2                                                 : Rare Slate
+ 951: T7_ROCK_LEVEL2@2                                                 : Rare Basalt
+ 952: T8_ROCK_LEVEL2@2                                                 : Rare Marble
+ 953: T4_ROCK_LEVEL3@3                                                 : Exceptional Travertine
+ 954: T5_ROCK_LEVEL3@3                                                 : Exceptional Granite
+ 955: T6_ROCK_LEVEL3@3                                                 : Exceptional Slate
+ 956: T7_ROCK_LEVEL3@3                                                 : Exceptional Basalt
+ 957: T8_ROCK_LEVEL3@3                                                 : Exceptional Marble
+ 958: T2_ORE                                                           : Copper Ore
+ 959: T3_ORE                                                           : Tin Ore
+ 960: T4_ORE                                                           : Iron Ore
+ 961: T5_ORE                                                           : Titanium Ore
+ 962: T6_ORE                                                           : Runite Ore
+ 963: T7_ORE                                                           : Meteorite Ore
+ 964: T8_ORE                                                           : Adamantium Ore
+ 965: T4_ORE_LEVEL1@1                                                  : Uncommon Iron Ore
+ 966: T5_ORE_LEVEL1@1                                                  : Uncommon Titanium Ore
+ 967: T6_ORE_LEVEL1@1                                                  : Uncommon Runite Ore
+ 968: T7_ORE_LEVEL1@1                                                  : Uncommon Meteorite Ore
+ 969: T8_ORE_LEVEL1@1                                                  : Uncommon Adamantium Ore
+ 970: T4_ORE_LEVEL2@2                                                  : Rare Iron Ore
+ 971: T5_ORE_LEVEL2@2                                                  : Rare Titanium Ore
+ 972: T6_ORE_LEVEL2@2                                                  : Rare Runite Ore
+ 973: T7_ORE_LEVEL2@2                                                  : Rare Meteorite Ore
+ 974: T8_ORE_LEVEL2@2                                                  : Rare Adamantium Ore
+ 975: T4_ORE_LEVEL3@3                                                  : Exceptional Iron Ore
+ 976: T5_ORE_LEVEL3@3                                                  : Exceptional Titanium Ore
+ 977: T6_ORE_LEVEL3@3                                                  : Exceptional Runite Ore
+ 978: T7_ORE_LEVEL3@3                                                  : Exceptional Meteorite Ore
+ 979: T8_ORE_LEVEL3@3                                                  : Exceptional Adamantium Ore
+ 980: T4_ORE_LEVEL4@4                                                  : Pristine Iron Ore
+ 981: T5_ORE_LEVEL4@4                                                  : Pristine Titanium Ore
+ 982: T6_ORE_LEVEL4@4                                                  : Pristine Runite Ore
+ 983: T7_ORE_LEVEL4@4                                                  : Pristine Meteorite Ore
+ 984: T8_ORE_LEVEL4@4                                                  : Pristine Adamantium Ore
+ 985: T1_HIDE                                                          : Scraps of Hide
+ 986: T2_HIDE                                                          : Rugged Hide
+ 987: T3_HIDE                                                          : Thin Hide
+ 988: T4_HIDE                                                          : Medium Hide
+ 989: T5_HIDE                                                          : Heavy Hide
+ 990: T6_HIDE                                                          : Robust Hide
+ 991: T7_HIDE                                                          : Thick Hide
+ 992: T8_HIDE                                                          : Resilient Hide
+ 993: T4_HIDE_LEVEL1@1                                                 : Uncommon Medium Hide
+ 994: T5_HIDE_LEVEL1@1                                                 : Uncommon Heavy Hide
+ 995: T6_HIDE_LEVEL1@1                                                 : Uncommon Robust Hide
+ 996: T7_HIDE_LEVEL1@1                                                 : Uncommon Thick Hide
+ 997: T8_HIDE_LEVEL1@1                                                 : Uncommon Resilient Hide
+ 998: T4_HIDE_LEVEL2@2                                                 : Rare Medium Hide
+ 999: T5_HIDE_LEVEL2@2                                                 : Rare Heavy Hide
+1000: T6_HIDE_LEVEL2@2                                                 : Rare Robust Hide
+1001: T7_HIDE_LEVEL2@2                                                 : Rare Thick Hide
+1002: T8_HIDE_LEVEL2@2                                                 : Rare Resilient Hide
+1003: T4_HIDE_LEVEL3@3                                                 : Exceptional Medium Hide
+1004: T5_HIDE_LEVEL3@3                                                 : Exceptional Heavy Hide
+1005: T6_HIDE_LEVEL3@3                                                 : Exceptional Robust Hide
+1006: T7_HIDE_LEVEL3@3                                                 : Exceptional Thick Hide
+1007: T8_HIDE_LEVEL3@3                                                 : Exceptional Resilient Hide
+1008: T4_HIDE_LEVEL4@4                                                 : Pristine Medium Hide
+1009: T5_HIDE_LEVEL4@4                                                 : Pristine Heavy Hide
+1010: T6_HIDE_LEVEL4@4                                                 : Pristine Robust Hide
+1011: T7_HIDE_LEVEL4@4                                                 : Pristine Thick Hide
+1012: T8_HIDE_LEVEL4@4                                                 : Pristine Resilient Hide
+1013: T2_FIBER                                                         : Cotton
+1014: T3_FIBER                                                         : Flax
+1015: T4_FIBER                                                         : Hemp
+1016: T5_FIBER                                                         : Skyflower
+1017: T6_FIBER                                                         : Amberleaf Cotton
+1018: T7_FIBER                                                         : Sunflax
+1019: T8_FIBER                                                         : Ghost Hemp
+1020: T4_FIBER_LEVEL1@1                                                : Uncommon Hemp
+1021: T5_FIBER_LEVEL1@1                                                : Uncommon Skyflower
+1022: T6_FIBER_LEVEL1@1                                                : Uncommon Amberleaf Cotton
+1023: T7_FIBER_LEVEL1@1                                                : Uncommon Sunflax
+1024: T8_FIBER_LEVEL1@1                                                : Uncommon Ghost Hemp
+1025: T4_FIBER_LEVEL2@2                                                : Rare Hemp
+1026: T5_FIBER_LEVEL2@2                                                : Rare Skyflower
+1027: T6_FIBER_LEVEL2@2                                                : Rare Amberleaf Cotton
+1028: T7_FIBER_LEVEL2@2                                                : Rare Sunflax
+1029: T8_FIBER_LEVEL2@2                                                : Rare Ghost Hemp
+1030: T4_FIBER_LEVEL3@3                                                : Exceptional Hemp
+1031: T5_FIBER_LEVEL3@3                                                : Exceptional Skyflower
+1032: T6_FIBER_LEVEL3@3                                                : Exceptional Amberleaf Cotton
+1033: T7_FIBER_LEVEL3@3                                                : Exceptional Sunflax
+1034: T8_FIBER_LEVEL3@3                                                : Exceptional Ghost Hemp
+1035: T4_FIBER_LEVEL4@4                                                : Pristine Hemp
+1036: T5_FIBER_LEVEL4@4                                                : Pristine Skyflower
+1037: T6_FIBER_LEVEL4@4                                                : Pristine Amberleaf Cotton
+1038: T7_FIBER_LEVEL4@4                                                : Pristine Sunflax
+1039: T8_FIBER_LEVEL4@4                                                : Pristine Ghost Hemp
+1040: T2_PLANKS                                                        : Birch Planks
+1041: T3_PLANKS                                                        : Chestnut Planks
+1042: T4_PLANKS                                                        : Pine Planks
+1043: T5_PLANKS                                                        : Cedar Planks
+1044: T6_PLANKS                                                        : Bloodoak Planks
+1045: T7_PLANKS                                                        : Ashenbark Planks
+1046: T8_PLANKS                                                        : Whitewood Planks
+1047: T4_PLANKS_LEVEL1@1                                               : Uncommon Pine Planks
+1048: T5_PLANKS_LEVEL1@1                                               : Uncommon Cedar Planks
+1049: T6_PLANKS_LEVEL1@1                                               : Uncommon Bloodoak Planks
+1050: T7_PLANKS_LEVEL1@1                                               : Uncommon Ashenbark Planks
+1051: T8_PLANKS_LEVEL1@1                                               : Uncommon Whitewood Planks
+1052: T4_PLANKS_LEVEL2@2                                               : Rare Pine Planks
+1053: T5_PLANKS_LEVEL2@2                                               : Rare Cedar Planks
+1054: T6_PLANKS_LEVEL2@2                                               : Rare Bloodoak Planks
+1055: T7_PLANKS_LEVEL2@2                                               : Rare Ashenbark Planks
+1056: T8_PLANKS_LEVEL2@2                                               : Rare Whitewood Planks
+1057: T4_PLANKS_LEVEL3@3                                               : Exceptional Pine Planks
+1058: T5_PLANKS_LEVEL3@3                                               : Exceptional Cedar Planks
+1059: T6_PLANKS_LEVEL3@3                                               : Exceptional Bloodoak Planks
+1060: T7_PLANKS_LEVEL3@3                                               : Exceptional Ashenbark Planks
+1061: T8_PLANKS_LEVEL3@3                                               : Exceptional Whitewood Planks
+1062: T4_PLANKS_LEVEL4@4                                               : Pristine Pine Planks
+1063: T5_PLANKS_LEVEL4@4                                               : Pristine Cedar Planks
+1064: T6_PLANKS_LEVEL4@4                                               : Pristine Bloodoak Planks
+1065: T7_PLANKS_LEVEL4@4                                               : Pristine Ashenbark Planks
+1066: T8_PLANKS_LEVEL4@4                                               : Pristine Whitewood Planks
+1067: T2_STONEBLOCK                                                    : Limestone Block
+1068: T3_STONEBLOCK                                                    : Sandstone Block
+1069: T4_STONEBLOCK                                                    : Travertine Block
+1070: T5_STONEBLOCK                                                    : Granite Block
+1071: T6_STONEBLOCK                                                    : Slate Block
+1072: T7_STONEBLOCK                                                    : Basalt Block
+1073: T8_STONEBLOCK                                                    : Marble Block
+1074: T2_METALBAR                                                      : Copper Bar
+1075: T3_METALBAR                                                      : Bronze Bar
+1076: T4_METALBAR                                                      : Steel Bar
+1077: T5_METALBAR                                                      : Titanium Steel Bar
+1078: T6_METALBAR                                                      : Runite Steel Bar
+1079: T7_METALBAR                                                      : Meteorite Steel Bar
+1080: T8_METALBAR                                                      : Adamantium Steel Bar
+1081: T4_METALBAR_LEVEL1@1                                             : Uncommon Steel Bar
+1082: T5_METALBAR_LEVEL1@1                                             : Uncommon Titanium Steel Bar
+1083: T6_METALBAR_LEVEL1@1                                             : Uncommon Runite Steel Bar
+1084: T7_METALBAR_LEVEL1@1                                             : Uncommon Meteorite Steel Bar
+1085: T8_METALBAR_LEVEL1@1                                             : Uncommon Adamantium Steel Bar
+1086: T4_METALBAR_LEVEL2@2                                             : Rare Steel Bar
+1087: T5_METALBAR_LEVEL2@2                                             : Rare Titanium Steel Bar
+1088: T6_METALBAR_LEVEL2@2                                             : Rare Runite Steel Bar
+1089: T7_METALBAR_LEVEL2@2                                             : Rare Meteorite Steel Bar
+1090: T8_METALBAR_LEVEL2@2                                             : Rare Adamantium Steel Bar
+1091: T4_METALBAR_LEVEL3@3                                             : Exceptional Steel Bar
+1092: T5_METALBAR_LEVEL3@3                                             : Exceptional Titanium Steel Bar
+1093: T6_METALBAR_LEVEL3@3                                             : Exceptional Runite Steel Bar
+1094: T7_METALBAR_LEVEL3@3                                             : Exceptional Meteorite Steel Bar
+1095: T8_METALBAR_LEVEL3@3                                             : Exceptional Adamantium Steel Bar
+1096: T4_METALBAR_LEVEL4@4                                             : Pristine Steel Bar
+1097: T5_METALBAR_LEVEL4@4                                             : Pristine Titanium Steel Bar
+1098: T6_METALBAR_LEVEL4@4                                             : Pristine Runite Steel Bar
+1099: T7_METALBAR_LEVEL4@4                                             : Pristine Meteorite Steel Bar
+1100: T8_METALBAR_LEVEL4@4                                             : Pristine Adamantium Steel Bar
+1101: T2_LEATHER                                                       : Stiff Leather
+1102: T3_LEATHER                                                       : Thick Leather
+1103: T4_LEATHER                                                       : Worked Leather
+1104: T5_LEATHER                                                       : Cured Leather
+1105: T6_LEATHER                                                       : Hardened Leather
+1106: T7_LEATHER                                                       : Reinforced Leather
+1107: T8_LEATHER                                                       : Fortified Leather
+1108: T4_LEATHER_LEVEL1@1                                              : Uncommon Worked Leather
+1109: T5_LEATHER_LEVEL1@1                                              : Uncommon Cured Leather
+1110: T6_LEATHER_LEVEL1@1                                              : Uncommon Hardened Leather
+1111: T7_LEATHER_LEVEL1@1                                              : Uncommon Reinforced Leather
+1112: T8_LEATHER_LEVEL1@1                                              : Uncommon Fortified Leather
+1113: T4_LEATHER_LEVEL2@2                                              : Rare Worked Leather
+1114: T5_LEATHER_LEVEL2@2                                              : Rare Cured Leather
+1115: T6_LEATHER_LEVEL2@2                                              : Rare Hardened Leather
+1116: T7_LEATHER_LEVEL2@2                                              : Rare Reinforced Leather
+1117: T8_LEATHER_LEVEL2@2                                              : Rare Fortified Leather
+1118: T4_LEATHER_LEVEL3@3                                              : Exceptional Worked Leather
+1119: T5_LEATHER_LEVEL3@3                                              : Exceptional Cured Leather
+1120: T6_LEATHER_LEVEL3@3                                              : Exceptional Hardened Leather
+1121: T7_LEATHER_LEVEL3@3                                              : Exceptional Reinforced Leather
+1122: T8_LEATHER_LEVEL3@3                                              : Exceptional Fortified Leather
+1123: T4_LEATHER_LEVEL4@4                                              : Pristine Worked Leather
+1124: T5_LEATHER_LEVEL4@4                                              : Pristine Cured Leather
+1125: T6_LEATHER_LEVEL4@4                                              : Pristine Hardened Leather
+1126: T7_LEATHER_LEVEL4@4                                              : Pristine Reinforced Leather
+1127: T8_LEATHER_LEVEL4@4                                              : Pristine Fortified Leather
+1128: T2_CLOTH                                                         : Simple Cloth
+1129: T3_CLOTH                                                         : Neat Cloth
+1130: T4_CLOTH                                                         : Fine Cloth
+1131: T5_CLOTH                                                         : Ornate Cloth
+1132: T6_CLOTH                                                         : Lavish Cloth
+1133: T7_CLOTH                                                         : Opulent Cloth
+1134: T8_CLOTH                                                         : Baroque Cloth
+1135: T4_CLOTH_LEVEL1@1                                                : Uncommon Fine Cloth
+1136: T5_CLOTH_LEVEL1@1                                                : Uncommon Ornate Cloth
+1137: T6_CLOTH_LEVEL1@1                                                : Uncommon Lavish Cloth
+1138: T7_CLOTH_LEVEL1@1                                                : Uncommon Opulent Cloth
+1139: T8_CLOTH_LEVEL1@1                                                : Uncommon Baroque Cloth
+1140: T4_CLOTH_LEVEL2@2                                                : Rare Fine Cloth
+1141: T5_CLOTH_LEVEL2@2                                                : Rare Ornate Cloth
+1142: T6_CLOTH_LEVEL2@2                                                : Rare Lavish Cloth
+1143: T7_CLOTH_LEVEL2@2                                                : Rare Opulent Cloth
+1144: T8_CLOTH_LEVEL2@2                                                : Rare Baroque Cloth
+1145: T4_CLOTH_LEVEL3@3                                                : Exceptional Fine Cloth
+1146: T5_CLOTH_LEVEL3@3                                                : Exceptional Ornate Cloth
+1147: T6_CLOTH_LEVEL3@3                                                : Exceptional Lavish Cloth
+1148: T7_CLOTH_LEVEL3@3                                                : Exceptional Opulent Cloth
+1149: T8_CLOTH_LEVEL3@3                                                : Exceptional Baroque Cloth
+1150: T4_CLOTH_LEVEL4@4                                                : Pristine Fine Cloth
+1151: T5_CLOTH_LEVEL4@4                                                : Pristine Ornate Cloth
+1152: T6_CLOTH_LEVEL4@4                                                : Pristine Lavish Cloth
+1153: T7_CLOTH_LEVEL4@4                                                : Pristine Opulent Cloth
+1154: T8_CLOTH_LEVEL4@4                                                : Pristine Baroque Cloth
+1877: T4_RUNE                                                          : Adept's Rune
+1878: T4_SOUL                                                          : Adept's Soul
+1879: T4_RELIC                                                         : Adept's Relic
+1880: T4_SHARD_AVALONIAN                                               : Adept's Avalonian Shard
+1881: T4_SHARD_CRYSTAL                                                 : Adept's Crystal Shard
+1882: T5_ESSENCE_POTION                                                : Expert's Arcane Essence
+1883: T5_ESSENCE                                                       : Expert's Faded Essence
+1884: T5_RUNE                                                          : Expert's Rune
+1885: T5_SOUL                                                          : Expert's Soul
+1886: T5_RELIC                                                         : Expert's Relic
+1887: T5_SHARD_AVALONIAN                                               : Expert's Avalonian Shard
+1888: T5_SHARD_CRYSTAL                                                 : Expert's Crystal Shard
+1889: T6_ESSENCE_POTION                                                : Master's Arcane Essence
+1890: T6_ESSENCE                                                       : Master's Faded Essence
+1891: T6_RUNE                                                          : Master's Rune
+1892: T6_SOUL                                                          : Master's Soul
+1893: T6_RELIC                                                         : Master's Relic
+1894: T6_SHARD_AVALONIAN                                               : Master's Avalonian Shard
+1895: T6_SHARD_CRYSTAL                                                 : Master's Crystal Shard
+1896: T7_ESSENCE_POTION                                                : Grandmaster's Arcane Essence
+1897: T7_ESSENCE                                                       : Grandmaster's Faded Essence
+1898: T7_RUNE                                                          : Grandmaster's Rune
+1899: T7_SOUL                                                          : Grandmaster's Soul
+1900: T7_RELIC                                                         : Grandmaster's Relic
+1901: T7_SHARD_AVALONIAN                                               : Grandmaster's Avalonian Shard
+1902: T7_SHARD_CRYSTAL                                                 : Grandmaster's Crystal Shard
+1903: T8_ESSENCE_POTION                                                : Elder's Arcane Essence
+1904: T8_ESSENCE                                                       : Elder's Faded Essence
+1905: T8_RUNE                                                          : Elder's Rune
+1906: T8_SOUL                                                          : Elder's Soul
+1907: T8_RELIC                                                         : Elder's Relic
+1908: T8_SHARD_AVALONIAN                                               : Elder's Avalonian Shard
+1909: T8_SHARD_CRYSTAL                                                 : Elder's Crystal Shard

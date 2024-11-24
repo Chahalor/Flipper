@@ -1,22 +1,22 @@
 # TODO - Flipper (by gpt)
 
 ## 1. Initialisation du Projet
-- [ ] Installer Python (v3.9 ou supérieur).
-- [ ] Créer un environnement virtuel : `python -m venv venv`.
-- [ ] Activer l’environnement virtuel : `source venv/bin/activate` ou `venv\Scripts\activate`.
-- [ ] Installer les librairies nécessaires :
+- [X] Installer Python (v3.9 ou supérieur).
+- [X] Créer un environnement virtuel : `python -m venv venv`.
+- [X] Activer l’environnement virtuel : `source venv/bin/activate` ou `venv\Scripts\activate`.
+- [X] Installer les librairies nécessaires :
   - [ ] `requests`
   - [ ] `flask`
   - [ ] `pandas`
   - [ ] `schedule`
-- [ ] Créer la structure du projet :
+- [X] Créer la structure du projet :
 / ├── app.py ├── api_utils.py ├── data_processing.py ├── templates/ ├── static/ ├── requirements.txt
 
 ---
 
 ## 2. Intégration de l'API Albion Online Data Project
-- [ ] Lire la documentation de l'API Albion Online Data Project.
-- [ ] Identifier les endpoints nécessaires (exemple : `/prices/{item_id}`).
+- [X] Lire la documentation de l'API Albion Online Data Project. (y'en a pas (bruh))
+- [X] Identifier les endpoints nécessaires (exemple : `/prices/{item_id}`).
 - [ ] Créer une fonction pour effectuer des appels API :
 - [ ] Gérer les paramètres (item_id, villes, etc.).
 - [ ] Gérer les erreurs d'API.

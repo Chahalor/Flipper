@@ -1,0 +1,60 @@
+{
+	"prices":
+	{
+		"CITY":
+		{
+			"ITEM": 
+			{
+				"1": 
+					{
+						"buy_price": 100,
+						"sell_price": 50,
+						"date_buy": "2023-10-05T14:48:00Z",
+						"date_sell": "2023-10-05T14:48:00Z"
+					},
+					"2": 
+					{
+						"buy_price": 200,
+						"sell_price": 100,
+						"date_buy": "2023-10-05T14:48:00Z",
+						"date_sell": "2023-10-05T14:48:00Z"
+					},
+					"3": 
+					{
+						"buy_price": 300,
+						"sell_price": 150,
+						"date_buy": "2023-10-05T14:48:00Z",
+						"date_sell": "2023-10-05T14:48:00Z"
+					},
+					"4": 
+				{
+						"buy_price": 400,
+						"sell_price": 200,
+						"date_buy": "2023-10-05T14:48:00Z",
+						"date_sell": "2023-10-05T14:48:00Z"
+					},
+					"5": 
+					{
+						"buy_price": 500,
+						"sell_price": 250,
+						"date_buy": "2023-10-05T14:48:00Z",
+						"date_sell": "2023-10-05T14:48:00Z"
+				}
+			}
+		}
+	},
+	"PROFITS":
+	{
+		"Items":
+		{
+			"quality": "ITEM QUALITY",
+			"buy_price": 100,
+			"date_buy": "2023-10-05T14:48:00Z",
+			"rune_cost": 10,
+			"sell_name": "ITEM TO SELL",
+			"sell_price": 50,
+			"date_sell": "2023-10-05T14:48:00Z",
+			"profit": 40
+		}
+	}
+}

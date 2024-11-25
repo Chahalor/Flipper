@@ -17,16 +17,17 @@
 ## 2. Intégration de l'API Albion Online Data Project
 - [X] Lire la documentation de l'API Albion Online Data Project. (y'en a pas (bruh))
 - [X] Identifier les endpoints nécessaires (exemple : `/prices/{item_id}`).
-- [ ] Créer une fonction pour effectuer des appels API :
-- [ ] Gérer les paramètres (item_id, villes, etc.).
-- [ ] Gérer les erreurs d'API.
-- [ ] Convertir les réponses JSON en données exploitables.
+- [X] Créer une fonction pour effectuer des appels API :
+- [X] Gérer les paramètres (item_id, villes, etc.).
+- [X] Gérer les erreurs d'API.
+- [X] Convertir les réponses JSON en données exploitables.
 
 ---
 
 ## 3. Traitement des Données
-- [ ] Créer une fonction pour comparer les prix entre plusieurs marchés :
-- [ ] Identifier les opportunités de profit (buy low, sell high).
+- [X] Créer une fonction pour comparer les prix entre plusieurs marchés :
+- [X] Identifier les opportunités de profit (buy low, sell high).
+ - [ ] touver un moyen de savoir combien de rune par item (db a moi ?)
 - [ ] Filtrer les données non pertinentes (prix null, erreurs).
 - [ ] Ajouter une fonctionnalité pour sauvegarder les données :
 - [ ] Enregistrer dans un fichier CSV ou JSON.

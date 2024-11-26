@@ -31,7 +31,68 @@ LIST_RUNE = [
 # |============Classes================|
 #  \=================================/
 
-# ...
+# City.Item.qlty.<attr>
+# BW.T4_BAG.3.price_min
+
+class Quality:
+	def __init__(self, qlty:int, item_id:str, quality:int, sell_price_min:int, sell_price_min_date:str, sell_price_max:int, 
+			  sell_price_max_date:str, buy_price_min:int, buy_price_min_date:str, buy_price_max:int, 
+			  buy_price_max_date:str):
+		self.qlty = qlty
+		self.item_id = item_id
+		self.quality = quality
+		self.sell_price_min = sell_price_min
+		self.sell_price_min_date = sell_price_min_date
+		self.sell_price_max = sell_price_max
+		self.sell_price_max_date = sell_price_max_date
+		self.buy_price_min = buy_price_min
+		self.buy_price_min_date = buy_price_min_date
+		self.buy_price_max = buy_price_max
+		self.buy_price_max_date = buy_price_max_date
+	
+	def __str__(self):
+		return f"Item: {self.item_id}, Quality: {self.quality}, Sell Price Min: {self.sell_price_min}, Sell Price Max: {self.sell_price_max}, Buy Price Min: {self.buy_price_min}, Buy Price Max: {self.buy_price_max}"
+
+class Item:
+	def __init__(self):
+		self.item_id = None
+		self.q0 = None
+		self.q1 = None
+		self.q2 = None
+		self.q3 = None
+		self.q4 = None
+		self.q5 = None
+
+	def __str__(self):
+		return (f"Item_id: {self.item_id}, Q0: {self.q0}, Q1: {self.q1}, Q2: {self.q2}, Q3: {self.q3}, Q4: {self.q4}, Q5: {self.q5}")
+
+	def add_quality(self, quality:Quality):
+		setattr(self, quality.quality, quality)
+
+class City:
+	def __init__(self, name:str):
+		self.name:str = name
+
+	def __str__(self):
+		return (f"City: {self.name}")
+
+	def add_item(self, item:Item):
+		setattr(self, item.item_id, item)
+
+class Root:
+	def __init__(self, citys:list[str]) -> None:
+		for city in citys:
+			setattr(self, city.replace(' ', '_'), City(city))
+
+	def __str__(self) -> str:
+		result = str()
+		for city in dir(self):
+			if not city.startswith('__'):
+				result += f"{city}: {getattr(self, city, "attr not found")}\n"
+		return (result)
+	
+	def reset_city(self, city:str) -> None:
+		setattr(self, city, City(city))
 
 #  /=================================\
 # |============Functions==============|
@@ -50,37 +111,28 @@ def request_url(url:str)->list[dict]:
 	return {}
 
 
-def get_items_data(list_items: list[str], citys:list[str], stock:dict)->dict:
+def get_items_data(list_items: list[str], citys:list[str], root:Root)->Root:
 	url = URL_BASE_PRICES_EU
 	url += ",".join(list_items)
-	stock = {
-			# "Black Market": {}, 
-			# "Briddgewatch": {}, 
-			# "Caerleon": {}, 
-			# "Fort Sterling": {}, 
-			# "Lymhurst": {}, 
-			# "Martlock": {}, 
-			# "Thetford": {}
-			}
-	if len(citys) != 0:
-		url += "?locations=" + ",".join(citys)
-	all_data = request_url(url)
-	# print(url)
-	for data in all_data:
-		stock.setdefault(data['city'], {})
-		stock[data['city']].setdefault(data['item_id'], {})
-		stock[data['city']][data['item_id']].setdefault(data['quality'], {})
-		
-		stock[data['city']][data['item_id']][data['quality']] = {
-			'sell_price_min': data['sell_price_min'],
-			'sell_price_min_date': data['sell_price_min_date'],
-			'sell_price_max': data['sell_price_max'],
-			'sell_price_max_date': data['sell_price_max_date'],
-			'buy_price_min': data['buy_price_min'],
-			'buy_price_min_date': data['buy_price_min_date'],
-			'buy_price_max': data['buy_price_max'],
-			'buy_price_max_date': data['buy_price_max_date']
-		}
-	return (stock)
+	if citys:
+		url += f"?locations={','.join(citys)}"
+	
+	data = request_url(url)
+
+	for item in data:
+		city:City = getattr(root, item['city'].replace(' ', '_'))	# root.LY
+		item_class = setattr(city, item['item_id'], Item())						# root.LY.T4_BAG
+		qlty = setattr(item_class, 'q' + str(item["quality"]), Quality(item['city'], 
+																 item['item_id'], 
+																 item["quality"], 
+																 item["sell_price_min"], 
+																 item["sell_price_min_date"], 
+																 item["sell_price_max"], 
+																 item["sell_price_max_date"], 
+																 item["buy_price_min"], 
+																 item["buy_price_min_date"], 
+																 item["buy_price_max"], 
+																 item["buy_price_max_date"]))
+	return (root)
 
 

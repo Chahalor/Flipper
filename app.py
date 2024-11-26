@@ -93,7 +93,11 @@ def entrer(min:int=0, rune:bool=False, buy_city:str="Caerleon", sell_city:str="B
 # |==============Main================|
 #  \=================================/
 if __name__ == '__main__':
-	profit = entrer(0, False, "Caerleon", "Black Market")
-	write_json("profit.json", profit)
+	# profit = entrer(0, False, "Caerleon", "Black Market")
+	# write_json("profit.json", profit)
 	# print(read_item_ids("Items/equipement.txt"))
 	# read_item_ids("Items/equipement.txt")
+	root = Root(["Caerleon", "Black Market"])
+	print(root)
+	# data = get_items_data(["T4_BAG", "T4_SHOES", "T4_ARMOR"], ["Caerleon", "Black Market"], root)
+	# print(root.Caerleon.T4_BAG.q3.sell_price_min)

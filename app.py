@@ -24,6 +24,7 @@ Big Header
 from api_utils import *
 from data_processing import *
 import json
+import DB
 
 #  /=================================\
 # |=========Global Variables==========|
@@ -41,14 +42,6 @@ URL_BASE_PRICES_EU = str("https://www.albion-online-data.com/api/v2/stats/prices
 #  /=================================\
 # |============Functions==============|
 #  \=================================/
-
-def read_item_ids(file: str) -> list[str]:
-	with open(file, 'r') as f:
-		data = f.read().splitlines()
-		result = []
-		for line in data:
-			result.append(line.split(':')[1].strip())
-	return (result)
 
 # input : benef min, rune use, ville achat, ville vente
 # output : Profit[nom item achat, nom item revente, prix achat, rune cost, prix vente, benef, % renta]
@@ -72,14 +65,9 @@ if __name__ == '__main__':
 	# write_json("profit.json", profit)
 	# print(read_item_ids("Items/equipement.txt"))
 	# read_item_ids("Items/equipement.txt")
-	# list_items = ["T4_BAG", "T4_BAG@1", "T4_BAG@2"]
-	# root = Root(["Caerleon", "Black Market"])
-	# data:Root = get_items_data(list_items, ["Caerleon", "Black Market"], root)
-	# print(data)
-	# print(request_url(URL_BASE_PRICES_EU + "T4_2H_CLAWPAIR"))
-	r = requests.get("https://www.albion-online-data.com/api/v2/stats/views/" + "T4_2H_CLAWPAIR@2" + "?locations=Caerleon,Black Market&qualities=1")
-	for rr in r.json():
-		print(rr)
-	# profits = get_profits(data, 0, False, "Caerleon", "Black Market", list_items)
-	# for profit in profits:
-	# 	print(profit)
+	list_items = ["T4_BAG", "T4_BAG@1", "T4_BAG@2"]
+	root = Root(["Caerleon", "Black Market"])
+	data:Root = get_items_data(list_items, ["Caerleon", "Black Market"], root)
+	prof = get_profits(data, 0, False, "Caerleon", "Black Market", list_items)
+	for p in prof:
+		print(p)

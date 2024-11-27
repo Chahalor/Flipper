@@ -89,7 +89,7 @@ class Root:
 		result = str()
 		for city in dir(self):
 			if not city.startswith('__'):
-				result += f"{city}: {getattr(self, city, "attr not found")}"
+				result += f"{city}: {getattr(self, city, 'attr not found')}"
 		return (result)
 
 #  /=================================\
@@ -120,7 +120,7 @@ def get_items_data(list_items: list[str], citys:list[str], root:Root)->Root:
 		url += f"?locations={','.join(citys)}"
 	new_root = root
 	data = request_url(url)
-	write_json(".test/data.json", data)
+	# write_json(".test/data.json", data)
 	for item in data:
 		city:City = root.__getattribute__(item["city"].replace(' ', '_'))	# root.<city>
 		city.__setattr__(item["item_id"], Item(item["item_id"]))			# root.<city>.<item>

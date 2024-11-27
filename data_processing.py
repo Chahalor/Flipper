@@ -20,54 +20,36 @@ TAX_QUICK_BUY = 1 # TODO: find the real value
 #  /=================================\
 # |============Classes================|
 #  \=================================/
-# ...
+
+class Profits:
+	def __init__(self, item_id:str, item_name:str, buy_price:int, buy_date:str, sell_price:int, sell_date:str):
+		self.item_id = item_id
+		self.item_name = item_name
+		self.buy_price = buy_price
+		self.buy_date = buy_date
+		self.sell_price = sell_price
+		self.sell_date = sell_date
+		self.profits = (self.sell_price - self.buy_price) * TAX
+		self.percent_rent = (self.profits / self.buy_price) * 100	# a mon avis c'est faux car pas de tax
+
+	def __str__(self):
+		return (f"Item: {self.item_name}, Buy Price: {self.buy_price}, Sell Price: {self.sell_price}, Profit: {self.profit}, Rentability: {self.rentability}, % Rentability: {self.percent_rent}")
 
 #  /=================================\
 # |============Functions==============|
 #  \=================================/
 
-# def no_enchant_getter(market_1:Item, market_2:Item, ressources:list[Item])->int:
-# 	'''
-# 	@brief: TODO
-# 	@param item: Item
-# 	@return: int
-# 	'''
-# 	if (market_1.sell_price_min - market_2.buy_price_max) * TAX > min:
-# 		return ((market_1.sell_price_min - market_2.buy_price_max) * TAX)
-# 	return (0)
-
-# def enchant_getter(market_1:Item, market_2:Item, min:int, ressources:list[Item])->int:
-# 	'''
-# 	@brief: TODO
-# 	@param item: Item
-# 	@return: int
-# 	'''
-# 	# TODO:
-# 	# - comparer (prix d'achat + prix rune * nb rune) et de vente
-# 	# - touver un moyen de savoir combien de rune par item (db a moi ?)
-# 	pass
-
-# # les donnees qui rentre dans cette fonction doivent contenir les prix des items en .0 a .3 pour toutes 
-# # les qualiters dans le market 1 et le market 2
-# # donc len(data_m1) == len(data_m2)
-# #  - exemple: data_m1[0] == T4_BAG quality 3 et data_m2[0] == T4_BAG quality 3
-# def get_opportunity(data_m1:list[Item], data_m2:list[Item], min:int, enchantement:bool, ressources:list[Item])->list[Item]:
-# 	'''
-# 	@brief Get the best opportunity of the data
-# 	@param data: list of items
-# 	@return list of items
-# 	'''
-# 	if (len(data_m1) != len(data_m2)):
-# 		return (list())
-# 	opportinity: list = []
-# 	value: int = 0
-# 	for item_m1, item_m2 in zip(data_m1, data_m2):
-# 		if enchantement :
-# 			value = enchant_getter(item_m1, item_m2, ressources)
-# 			if value * TAX > min:
-# 				opportinity.append(item_m1)
-# 		else:
-# 			if (item_m2.sell_price_min * TAX_QUICK_BUY - item_m1.buy_price_max) * TAX > min:
-# 				opportinity.append(item_m1)
-# 	return (opportinity)
-
+def get_profits(data, min:int, rune:bool, buy_city:str, sell_city:str, list_items:list[str])->list[Profits]:
+	result = list()
+	if not rune :
+		for item in list_items :
+			for qlty in range(0, 6) :
+				buy_price = data.__getattribute__(buy_city).__getattribute__(item).__getattribute__(f"q{qlty}").sell_price_min
+				sell_price = data.__getattribute__(sell_city).__getattribute__(item).__getattribute__(f"q{qlty}").buy_price_max
+			if (sell_price - buy_price) * TAX > min:
+				result.append(Profits(item, item, buy_price, 
+									  data.__getattribute__(buy_city).__getattribute__(item).sell_price_min_date, 
+									  sell_price, data.__getattribute__(sell_city).__getattribute__(item).buy_price_max_date))
+	else:
+		return (None) # TODO: implement the rune calculation
+	return (result)

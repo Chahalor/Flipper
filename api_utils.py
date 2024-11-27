@@ -9,7 +9,7 @@ Big Header
 #  \=================================/
 
 import requests
-from json import load
+from json import load, dump
 
 #  /=================================\
 # |=========Global Variables==========|
@@ -51,11 +51,11 @@ class Quality:
 		self.buy_price_max_date = buy_price_max_date
 	
 	def __str__(self):
-		return f"Item: {self.item_id}, Quality: {self.quality}, Sell Price Min: {self.sell_price_min}, Sell Price Max: {self.sell_price_max}, Buy Price Min: {self.buy_price_min}, Buy Price Max: {self.buy_price_max}"
+		return f"\n\t\t\tItem: {self.item_id}, Quality: {self.quality}, Sell Price Min: {self.sell_price_min}, Sell Price Max: {self.sell_price_max}, Buy Price Min: {self.buy_price_min}, Buy Price Max: {self.buy_price_max}"
 
 class Item:
-	def __init__(self):
-		self.item_id = None
+	def __init__(self, id:str):
+		self.item_id = id
 		self.q0 = None
 		self.q1 = None
 		self.q2 = None
@@ -64,20 +64,21 @@ class Item:
 		self.q5 = None
 
 	def __str__(self):
-		return (f"Item_id: {self.item_id}, Q0: {self.q0}, Q1: {self.q1}, Q2: {self.q2}, Q3: {self.q3}, Q4: {self.q4}, Q5: {self.q5}")
+		return (f"\n\t\tItem_id: {self.item_id}, Q0: {self.q0}, Q1: {self.q1}, Q2: {self.q2}, Q3: {self.q3}, Q4: {self.q4}, Q5: {self.q5}")
 
-	def add_quality(self, quality:Quality):
-		setattr(self, quality.quality, quality)
+	def __add_quality(self, quality:Quality):
+		setattr(self, str(quality.quality), quality)
 
 class City:
 	def __init__(self, name:str):
 		self.name:str = name
 
 	def __str__(self):
-		return (f"City: {self.name}")
-
-	def add_item(self, item:Item):
-		setattr(self, item.item_id, item)
+		result = str()
+		for item in dir(self):
+			if not item.startswith('__'):
+				result += f"\n\t{getattr(self, item, 'attr not found')}"
+		return (result)
 
 class Root:
 	def __init__(self, citys:list[str]) -> None:
@@ -88,16 +89,17 @@ class Root:
 		result = str()
 		for city in dir(self):
 			if not city.startswith('__'):
-				result += f"{city}: {getattr(self, city, "attr not found")}\n"
+				result += f"{city}: {getattr(self, city, "attr not found")}"
 		return (result)
-	
-	def reset_city(self, city:str) -> None:
-		setattr(self, city, City(city))
 
 #  /=================================\
 # |============Functions==============|
 #  \=================================/
 
+def write_json(path: str, data: dict) -> None:
+	with open(path, 'w') as json_file:
+		dump(data, json_file, indent=4)
+		json_file.close()
 
 def request_url(url:str)->list[dict]:
 	try:
@@ -116,23 +118,24 @@ def get_items_data(list_items: list[str], citys:list[str], root:Root)->Root:
 	url += ",".join(list_items)
 	if citys:
 		url += f"?locations={','.join(citys)}"
-	
+	new_root = root
 	data = request_url(url)
-
+	write_json(".test/data.json", data)
 	for item in data:
-		city:City = getattr(root, item['city'].replace(' ', '_'))	# root.LY
-		item_class = setattr(city, item['item_id'], Item())						# root.LY.T4_BAG
-		qlty = setattr(item_class, 'q' + str(item["quality"]), Quality(item['city'], 
-																 item['item_id'], 
-																 item["quality"], 
-																 item["sell_price_min"], 
-																 item["sell_price_min_date"], 
-																 item["sell_price_max"], 
-																 item["sell_price_max_date"], 
-																 item["buy_price_min"], 
-																 item["buy_price_min_date"], 
-																 item["buy_price_max"], 
-																 item["buy_price_max_date"]))
-	return (root)
+		city:City = root.__getattribute__(item["city"].replace(' ', '_'))	# root.<city>
+		city.__setattr__(item["item_id"], Item(item["item_id"]))			# root.<city>.<item>
+		item_class:Item = city.__getattribute__(item["item_id"])
+		item_class.__setattr__(f'q{item["quality"]}', Quality(item['city'],	# root.<city>.<item>.q<quality>
+															  item['item_id'],
+															  item["quality"],
+															  item["sell_price_min"],
+															  item["sell_price_min_date"],
+															  item["sell_price_max"],
+															  item["sell_price_max_date"],
+															  item["buy_price_min"],
+															  item["buy_price_min_date"],
+															  item["buy_price_max"],
+															  item["buy_price_max_date"]))
+	return (new_root)
 
 

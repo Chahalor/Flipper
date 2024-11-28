@@ -1,4 +1,5 @@
 requestes
 time
 flask
+nats-py
 ```

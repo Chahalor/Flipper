@@ -29,6 +29,7 @@ import DB
 #  /=================================\
 # |=========Global Variables==========|
 #  \=================================/
+MAX_URL_SIZE = int(4096)
 MAX_REQUESTS_PER_MINUTE = int(180)
 MAX_REQUESTS_PER_5_MINUTES = int(300)
 URL_BASE_PRICES_EU = str("https://www.albion-online-data.com/api/v2/stats/prices/")
@@ -43,10 +44,52 @@ URL_BASE_PRICES_EU = str("https://www.albion-online-data.com/api/v2/stats/prices
 # |============Functions==============|
 #  \=================================/
 
+
+def tkt(path_db:str, list_items:list[str], list_citys:list[str], list_qualitys:list[str], base_url:str=URL_BASE_PRICES_EU) -> str:
+	if not list_items or not base_url :
+		return (None)
+
+	# db = DB.read_json_DB(path_db)
+
+	url = base_url
+	url_addon = ""
+	if list_citys or list_qualitys:
+		url_addon += "?"
+		if list_citys:
+			url_addon += "locations=" + ",".join(list_citys)
+		if list_qualitys:
+			url_addon += "&qualities=" + ",".join(list_qualitys)
+	for item in list_items:
+		if (len(url_addon) + len(url) + len(item) + 1 > MAX_URL_SIZE):
+			url += url_addon
+			data = request_url(url)
+			print(json.dumps(data, indent=4))
+			if not data:
+				return (None)
+			DB.write_all_requests(path_db, data)
+			url = base_url
+		else :
+			if not url.endswith('/') :
+				url += ',' + item
+			else :
+				url += item
+	url += url_addon
+	data = request_url(url)
+	print(json.dumps(data, indent=4))
+	if not data:
+		return (None)
+	DB.write_all_requests(path_db, data)
+	return (path_db)
+	
+
+
+
+
+
 # input : benef min, rune use, ville achat, ville vente
 # output : Profit[nom item achat, nom item revente, prix achat, rune cost, prix vente, benef, % renta]
 def entrer(min:int=0, rune:bool=False, buy_city:str="Caerleon", sell_city:str="Black Market")->dict:
-	all_item_IDs = read_item_ids("Items/equipement.txt")
+	all_item_IDs = DB.read_item_ids("Items/equipement.txt")
 	# print(all_item_IDs)
 	
 	stock = dict()
@@ -61,13 +104,6 @@ def entrer(min:int=0, rune:bool=False, buy_city:str="Caerleon", sell_city:str="B
 # |==============Main================|
 #  \=================================/
 if __name__ == '__main__':
-	# profit = entrer(0, False, "Caerleon", "Black Market")
-	# write_json("profit.json", profit)
-	# print(read_item_ids("Items/equipement.txt"))
-	# read_item_ids("Items/equipement.txt")
-	list_items = ["T4_BAG", "T4_BAG@1", "T4_BAG@2"]
-	root = Root(["Caerleon", "Black Market"])
-	data:Root = get_items_data(list_items, ["Caerleon", "Black Market"], root)
-	prof = get_profits(data, 0, False, "Caerleon", "Black Market", list_items)
-	for p in prof:
-		print(p)
+	DB.create_json_DB("Data-Base/stock.json", "Items/equipement.txt")
+	# tkt("Data-Base/stock.json", ["T4_BAG", "T4_BAG@1", "T4_BAG@2"], ["Black Market", "Caerleon"], ["1", "2", "3", "4", "5"], URL_BASE_PRICES_EU)
+

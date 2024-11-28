@@ -47,7 +47,9 @@ def get_profits(data, min:int, rune:bool, buy_city:str, sell_city:str, list_item
 				continue
 			for i in range(1, 6) :
 				qlty = data.__getattribute__(buy_city.replace(' ', '_')).__getattribute__(item_id).__getattribute__(f"q{i}")
-				if
+				if (None) :
+					pass
+				# if (qlty.sell_price_avg > min):
 	else:
 		return (None) # TODO: implement the rune calculation
 	return (result)
